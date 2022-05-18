@@ -15,13 +15,16 @@ import tensorflow_addons # For focal loss function used in model
 model = load_model('ozfish_cnn')
 labels = pickle.load(open('ozfish_labels.pkl', 'rb'))
 queue = deque(maxlen = 90)
-clip = cv2.VideoCapture('video/BRUVS_10.mp4')
+clip = cv2.VideoCapture('video/BRUVS_12.mp4')
 writer = None
+(W, H) = (None, None)
 
 while True:
     exist, frame = clip.read()
     if not exist:
         break
+    if W is None or H is None:
+        (H, W) = frame.shape[:2]
     output = frame.copy() # Save original frame for output later
     # Preprocess the frame to match properties of images used in training
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB) # Convert from BGR to RGB format
@@ -35,10 +38,8 @@ while True:
     avg = np.array(queue).mean(axis = 0) # Average probability of each class based on current history
     index = np.argmax(avg) # Get index of class with highest average probability
     species = labels[index]
-    
     if cv2.waitKey(1) == ord('q'):
         break
-    
     # Format the output image
     text = "Species: {}".format(species)
     org = (0,55)
@@ -47,13 +48,12 @@ while True:
     color = (255,255,255)
     thickness = 2
     cv2.putText(output, text, org, font, fontScale, color, thickness) # Add text to image
-    
     # Write the output video to disk
     if writer == None:
         fps = 30
         (H, W) = output.shape[:2]
-        fourcc = cv2.VideoWriter_fourcc(*'MJPG') # .mp4 format
-        writer = cv2.VideoWriter('labelled/BRUVS_Labelled_3.mp4', fourcc, fps, (W, H), True)
+        fourcc = cv2.VideoWriter_fourcc(*'mp4v') # .mp4 format
+        writer = cv2.VideoWriter('labelled/BRUVS_Labelled_4.mp4', fourcc, fps, (W, H))
     writer.write(output)
     
 writer.release()
