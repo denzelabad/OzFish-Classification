@@ -1,7 +1,7 @@
 # OzFish-Classification
 Using a CNN to identify different species of Australian fish in underwater video recordings
 
-Clip 1:
+### Clip 1:
 
 https://user-images.githubusercontent.com/69582949/169447809-1b285c0a-90ed-4353-8abc-1cc1fa3a4edd.mp4
 
