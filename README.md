@@ -3,7 +3,7 @@ Using a CNN to identify different species of Australian fish in underwater video
 
 Clip 1:
 
-https://user-images.githubusercontent.com/69582949/169447513-9f90251e-7376-43fe-91ef-935189eef467.mp4
+https://user-images.githubusercontent.com/69582949/BRUVS_1.mp4
 
 Clip 2:
 
