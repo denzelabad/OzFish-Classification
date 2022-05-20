@@ -1,5 +1,7 @@
-# OzFish-Classification
-This is a video classification project that uses a Convolutional Neural Network to identify a variety of fish species in underwater research videos. Baited Underwater Video Stations (BRUVS) are a tool used to monitor and survey fish in a variety of underwater habitats, and involve lowering stationary video cameras rigged with bait to the seafloor that attract and record nearby fish. After chancing upon an online livestream of one of these BRUVS I thought it would be far more interesting and educational if there were a way to identify the fish in the livestream, as they normally just consist of raw footage with no commentary or labels. I figured I could apply what I'd learned about computer vision to try and create a solution to that problem.
+# Fish Video Classification
+This project uses a Convolutional Neural Network to attempt to identify a variety of fish species in underwater research videos. 
+
+Baited Underwater Video Stations (BRUVS) are a tool used to monitor and survey fish in a variety of underwater habitats, and involve lowering stationary video cameras rigged with bait to the seafloor to attract and record nearby fish. After discovering a few online livestreams of these BRUVS I found myself in awe of how interesting some fish looked and was constantly wondering what species of fish were being shown, as the livestreams normally consisted of raw footage with no commentary or labels. Instead of scouring Google trying to figure out the species of each fish, I figured I could apply what I'd learned about machine learning to try and create a deep learning model that would help solve that problem.
 
 
 ### Clip 1:
