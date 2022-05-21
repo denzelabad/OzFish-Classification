@@ -24,10 +24,14 @@ The resulting CNN model achieved an accuracy of 81.82% on a test dataset contain
 The clips below highlight the model's ability to identify fish in BRUVS video clips.
 
 #### Clip 1:
-this
+
+The fish featured below is a [Rubrioperculatus](https://fishesofaustralia.net.au/home/species/2465). In videos where a single fish is clearly seen and not interrupted by heavy fish activity the model performs quite well, as seen below. 
+
 https://user-images.githubusercontent.com/69582949/169447809-1b285c0a-90ed-4353-8abc-1cc1fa3a4edd.mp4
 
 #### Clip 2:
+
+Things start to get a little messy once multiple fish of different types are swimming in the frame. The fish centered in the frame below is a [Stellatus](https://fishesofaustralia.net.au/home/species/759), which the model properly identifies. However once the fish moves into an unfavourable angle, it starts to produce incorrect predictions. The silver-looking fish with black dots on the abdomen are [Gymnostethus](https://fishesofaustralia.net.au/home/species/4262), which the model corrently identifies at times, but it can be unclear what the model is predicting when there are so many fish in the frame. An object detection model would be better suited in ths case.
 
 https://user-images.githubusercontent.com/69582949/169447858-1b4fc145-9d63-43fe-a4ad-aeb0619267f4.mp4
 
