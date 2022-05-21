@@ -6,13 +6,18 @@ Baited Underwater Video Stations (BRUVS) are a tool used to monitor and survey f
 
 ### Data
 
-This project uses the Ozfish dataset for testing and training which can be found [here](https://github.com/open-AIMS/ozfish). It consists of over 80k image crops of hundreds of species of fish taken from a BRUVS program, including an associated metadata file that links each fish crop with its species, genus and family.
+This project uses the Ozfish dataset for testing and training which can be found [here](https://github.com/open-AIMS/ozfish). It consists of over 80k image crops of hundreds of species of fish taken from a BRUVS program, including an associated metadata file that links each fish crop with its species, genus and family. The data has a major class imbalance with value counts for classes ranging from 2 to 6095 images.
 
 ### Method
 
-The idea behind this project was to train a Convolutional Neural Network using Keras to classify images of different fish, and then use that model to predict, in real-time, the species of fish in video clips taken from BRUVS. The CNN architecture was built with inspiration taken from the MiniVGGNet architecture, with tweaks and adjustments added to maximise model performance.
-![minivggnet](https://user-images.githubusercontent.com/69582949/169637840-6e902f07-8b4f-4cda-b5e0-37e5515de983.png)
+The idea behind this project was to train a Convolutional Neural Network using Keras to classify images of different fish, and then use that model to predict, in real-time, the species of fish in video clips taken from BRUVS. 
 
+1. Wrangle and clean data, perform data augmentation, train and optimise the CNN. This was all done in a [Jupyter Notebook](https://github.com/denzelabad/OzFish-Classification/blob/main/Ozfish%20Classification.ipynb). 
+2. Use OpenCV to extract each frame from a BRUVS video clip as an image, feed the image into the CNN, label the image with the class containing the highest average probability, export the new labelled video clip. This step was done in this Python [script](https://github.com/denzelabad/OzFish-Classification/blob/main/Ozfish%20Video%20Script.py).
+
+The CNN architecture was built with inspiration taken from the MiniVGGNet architecture, with tweaks and adjustments added to maximise model performance. Focal loss was also implemented as the loss function in order to try and address the class imbalance issue.
+
+The OpenCV implementation also made use of the rolling average of predictions in order to add stability to the outputted labels. It would calculate the average class probability of the last 90 frames and label the image with the highest corresponding class.
 
 ### Results
 
