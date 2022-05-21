@@ -31,11 +31,13 @@ https://user-images.githubusercontent.com/69582949/169447809-1b285c0a-90ed-4353-
 
 #### Clip 2:
 
-Things start to get a little messy once multiple fish of different types are swimming in the frame. The fish centered in the frame below is a [Stellatus](https://fishesofaustralia.net.au/home/species/759), which the model properly identifies. However once the fish moves into an unfavourable angle, it starts to produce incorrect predictions. The silver-looking fish with black dots on the abdomen are [Gymnostethus](https://fishesofaustralia.net.au/home/species/4262), which the model corrently identifies at times, but it can be unclear what the model is predicting when there are so many fish in the frame. An object detection model would be better suited in ths case.
+Things start to get a little messy once multiple fish of different types are swimming in the frame. The fish centered in the frame below is a [Stellatus](https://fishesofaustralia.net.au/home/species/759), which the model properly identifies. However once the fish moves into an unfavourable angle, it starts to produce incorrect predictions. The various silver-looking fish swimming around are a combination of [Gymnostethus](https://fishesofaustralia.net.au/home/species/4262) and [Rubrioperculatus](https://fishesofaustralia.net.au/home/species/2465), which the model corrently identifies at times, but it can be unclear what the model is predicting when there are so many fish in the frame. An object detection model would be better suited in this case.
 
 https://user-images.githubusercontent.com/69582949/169447858-1b4fc145-9d63-43fe-a4ad-aeb0619267f4.mp4
 
 #### Clip 3:
+
+The model performs quite well in identifying schools of fish of the same species. Below features a school of [Fulvoguttatus](https://fishesofaustralia.net.au/home/species/4261) fish, where the model produces mostly correct predictions despite the large number of fish present.
 
 https://user-images.githubusercontent.com/69582949/169447878-6b8984ea-dc6a-4ba3-8380-cefb093f0cd3.mp4
 
