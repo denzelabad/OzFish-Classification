@@ -2,6 +2,8 @@
 ### Description
 This project uses a Convolutional Neural Network to attempt to identify a variety of fish species in underwater research videos. 
 
+### Background
+
 Baited Underwater Video Stations (BRUVS) are a tool used to monitor and survey fish in a variety of underwater habitats, and involve lowering stationary video cameras rigged with bait to the seafloor to attract and record nearby fish. I would occasionally find online livestreams of these BRUVS where they would feature a number of amazing looking fish, but weren't supplemented with commentary or any labels so I could never figure out what the species of fish were. I figured these would be much more interesting and educational if they automated the identification of any fish that would show up on the camera. Using my knowledge of machine learning and computer vision I decided to try and provide a solution to that problem.
 
 ### Data
@@ -17,12 +19,12 @@ The idea behind this project was to train a Convolutional Neural Network using K
 
 ### Results
 
+The resulting CNN model achieved an accuracy of 81.82% on a test dataset containing 13,243 images with 158 classes. Its performance was limited by the large class imbalance present in the data, which resulted in the model performing much better in predictions for some classes over others.
 
-The clips below were obtained from raw BRUVS footage found [here](https://data.jcu.edu.au/aims/Oceanic_Shoals_NERP/BRUVS/)
-
+The clips below highlight the model's ability to identify fish in BRUVS video clips.
 
 #### Clip 1:
-
+this
 https://user-images.githubusercontent.com/69582949/169447809-1b285c0a-90ed-4353-8abc-1cc1fa3a4edd.mp4
 
 #### Clip 2:
@@ -37,4 +39,4 @@ https://user-images.githubusercontent.com/69582949/169447878-6b8984ea-dc6a-4ba3-
 
 https://user-images.githubusercontent.com/69582949/169447889-7a921121-c679-4a10-9221-8ee9010daa14.mp4
 
-
+These clips were obtained from raw BRUVS footage found [here](https://data.jcu.edu.au/aims/Oceanic_Shoals_NERP/BRUVS/)
