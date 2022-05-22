@@ -45,4 +45,4 @@ https://user-images.githubusercontent.com/69582949/169447878-6b8984ea-dc6a-4ba3-
 
 https://user-images.githubusercontent.com/69582949/169447889-7a921121-c679-4a10-9221-8ee9010daa14.mp4
 
-These clips were obtained from raw BRUVS footage found [here](https://data.jcu.edu.au/aims/Oceanic_Shoals_NERP/BRUVS/)
+These clips were obtained from raw BRUVS footage found [here](https://data.jcu.edu.au/aims/Oceanic_Shoals2014_AIMS/BRUVS/)
