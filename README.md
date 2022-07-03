@@ -41,8 +41,4 @@ The model performs quite well in identifying schools of fish of the same species
 
 https://user-images.githubusercontent.com/69582949/169447878-6b8984ea-dc6a-4ba3-8380-cefb093f0cd3.mp4
 
-#### Clip 4:
-
-https://user-images.githubusercontent.com/69582949/169447889-7a921121-c679-4a10-9221-8ee9010daa14.mp4
-
 These clips were obtained from raw BRUVS footage found [here](https://data.jcu.edu.au/aims/Oceanic_Shoals2014_AIMS/BRUVS/)
