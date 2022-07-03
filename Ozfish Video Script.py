@@ -15,7 +15,7 @@ import tensorflow_addons # For focal loss function used in model
 model = load_model('ozfish_cnn')
 labels = pickle.load(open('ozfish_labels.pkl', 'rb'))
 queue = deque(maxlen = 90)
-clip = cv2.VideoCapture('video/BRUVS_12.mp4')
+clip = cv2.VideoCapture('video/BRUVS_1.mp4')
 writer = None
 (W, H) = (None, None)
 
@@ -52,8 +52,8 @@ while True:
     if writer == None:
         fps = 30
         (H, W) = output.shape[:2]
-        fourcc = cv2.VideoWriter_fourcc(*'mp4v') # .mp4 format
-        writer = cv2.VideoWriter('labelled/BRUVS_Labelled_4.mp4', fourcc, fps, (W, H))
+        fourcc = cv2.VideoWriter_fourcc(*'H264') # .mp4 format
+        writer = cv2.VideoWriter('labelled/BRUVS_Labelled_1.mp4', fourcc, fps, (W, H))
     writer.write(output)
     
 writer.release()
