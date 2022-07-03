@@ -4,7 +4,7 @@ This project uses a Convolutional Neural Network to attempt to identify a variet
 
 ### Background
 
-Baited Underwater Video Stations (BRUVS) are a tool used to monitor and survey fish in a variety of underwater habitats, and involve lowering stationary video cameras rigged with bait to the seafloor to attract and record nearby fish. I would occasionally find online livestreams of these BRUVS where they would feature a number of amazing looking fish, but weren't supplemented with commentary or any labels so I could never figure out what the species of fish were. I figured these would be much more interesting and educational if they automated the identification of any fish that would show up on the camera. Using my knowledge of machine learning and computer vision I decided to try and provide a solution to that problem.
+Baited Underwater Video Stations (BRUVS) are a tool used to monitor and survey fish in a variety of underwater habitats, and involve lowering stationary video cameras rigged with bait to the seafloor to attract and record nearby fish. I would occasionally find online livestreams of these BRUVS where they would feature a number of amazing looking fish, but weren't supplemented with any commentary or labels so identifying any fish in the frame required extensive googling on my part. I thought that these recordings would be so much more interesting and educational if they automated the identification of fish that would show up on the camera. Using my knowledge of machine learning and computer vision I decided to try and provide a solution to that problem.
 
 ### Data
 
@@ -14,8 +14,8 @@ This project uses the Ozfish dataset for testing and training which can be found
 
 The idea behind this project was to train a Convolutional Neural Network using Keras to classify images of different fish, and then use that model to predict, in real-time, the species of fish in video clips taken from BRUVS. 
 
-1. Wrangle and clean data, perform data augmentation, train and optimise the CNN. This was all done in a [Jupyter Notebook](https://github.com/denzelabad/OzFish-Classification/blob/main/Ozfish%20Classification.ipynb). 
-2. Use OpenCV to extract each frame from a BRUVS video clip as an image, feed the image into the CNN, label the image with the class containing the highest probability, export the new labelled video clip. Uses the rolling average of predictions to prevent label flickering; the class with the highest average probability in the last 90 frames was written onto the image to make the outputted label more stable in consecutive frames. This step was done in this [Python script](https://github.com/denzelabad/OzFish-Classification/blob/main/Ozfish%20Video%20Script.py).
+1. Wrangle and clean data, perform data augmentation, train and optimise the CNN. This was all done in a [Jupyter Notebook](https://github.com/denzelabad/OzFish-Classification/blob/main/Fish%20Image%20Classification.ipynb). 
+2. Use OpenCV to extract each frame from a BRUVS video clip as an image, feed the image into the CNN, label the image with the class containing the highest probability, export the new labelled video clip. Uses the rolling average of predictions to prevent label flickering, ie. the class with the highest average probability in the last 90 frames was written onto the image to make the outputted label more stable in consecutive frames. This step was done in this [Python script](https://github.com/denzelabad/OzFish-Classification/blob/main/Ozfish%20Video%20Script.py).
 
 ### Results
 
@@ -45,4 +45,4 @@ https://user-images.githubusercontent.com/69582949/169447878-6b8984ea-dc6a-4ba3-
 
 https://user-images.githubusercontent.com/69582949/169447889-7a921121-c679-4a10-9221-8ee9010daa14.mp4
 
-These clips were obtained from raw BRUVS footage found [here](https://data.jcu.edu.au/aims/Oceanic_Shoals_NERP/BRUVS/)
+These clips were obtained from raw BRUVS footage found [here](https://data.jcu.edu.au/aims/Oceanic_Shoals2014_AIMS/BRUVS/)
