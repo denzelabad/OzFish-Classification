@@ -19,7 +19,7 @@ The idea behind this project was to train a Convolutional Neural Network using K
 
 ### Results
 
-The resulting CNN model achieved an accuracy of 81.82% on a test dataset containing 13,243 images with 158 classes. Its performance was limited by the large class imbalance present in the data, which resulted in the model performing much better in predictions for some classes over others.
+The resulting CNN model achieved an accuracy of 83% on a test dataset containing 14,299 images with 151 classes. Its performance was limited by the large class imbalance present in the data, which resulted in the model performing much better in predictions for some classes over others.
 
 The clips below highlight the model's ability to identify fish in BRUVS video clips.
 
